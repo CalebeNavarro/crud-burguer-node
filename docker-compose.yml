@@ -1,0 +1,10 @@
+version: "3.9" ## versão que será utilizada
+services: ## define um serviço
+    db: ## nome do serviço
+        image: "postgres"
+        ports:
+            - 5444:5432
+        environment: ## variavés de ambiente
+            POSTGRES_PASSWORD: "123456"
+            POSTGRES_USER: "postgres"
+            POSTGRES_DB: "tetete"
