@@ -1,3 +1,6 @@
+## arquivo necessário para ser usado junto com docker-compose up
+## eu não estou usando esse arquivo, mantendo apenas para ter como exemplo.
+
 version: "3.9" ## versão que será utilizada
 services: ## define um serviço
     db: ## nome do serviço
