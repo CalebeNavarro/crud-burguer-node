@@ -21,12 +21,15 @@
       "nodemon": "^2.0.15",
       "pg": "^8.7.1",
       "reflect-metadata": "^0.1.13",
-      "typeorm": "^0.2.41"
+      "sucrase": "^3.20.3",
+      "typeorm": "^0.2.41",
+      "yup": "^0.32.11"
    },
    "scripts": {
       "start": "ts-node src/index.ts",
       "dev": "ts-node src/app.ts",
       "typeorm": "node --require ts-node/register ./node_modules/typeorm/cli.js",
-      "aaa": "ts-node-dev ./node_modules/typeorm/cli.js"
+      "aaa": "ts-node-dev --files --inspect --ignore-watch node_modules src/app.ts",
+      "deve": "nodemon src/app.ts"
    }
 }

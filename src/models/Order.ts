@@ -3,14 +3,19 @@ import {
   PrimaryGeneratedColumn,
   Column,
   CreateDateColumn,
-  UpdateDateColumn
+  UpdateDateColumn,
+  OneToMany
 } from "typeorm";
+import OrderProduct from "./OrderProduct";
 
 @Entity("orders")
 export class Order {
 
   @PrimaryGeneratedColumn("uuid")
   id: number;
+
+  @OneToMany(() => OrderProduct, (orderProduct) => orderProduct.order, { eager: true })
+  products: OrderProduct[];
 
   @Column()
   desk: string;

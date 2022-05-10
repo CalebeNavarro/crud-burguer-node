@@ -12,7 +12,7 @@ import { Exclude } from "class-transformer";
 export class User {
 
     @PrimaryGeneratedColumn("uuid")
-    id: number;
+    id: string;
 
     @Column()
     name: string;
